@@ -1,5 +1,5 @@
-name: 'Replicate Github Release Asset'
-description: 'Replicates a Github release to another repository'
+name: 'Trigger remote/local Github Action'
+description: 'Trigger a github action from this action'
 
 inputs:
   name:
