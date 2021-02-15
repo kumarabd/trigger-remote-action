@@ -34,7 +34,7 @@ fi
 
 curl \
   -X POST \
-  -H "Authorization: token a4facd4b63f9f6e094ed9797bb1837c023928d01" \
+  -H "Authorization: token $TOKEN" \
   -H "Accept: application/vnd.github.v3+json" \
   $WORKFLOW_API_URL/$ACTION_ID/dispatches \
   -d '{"ref":"master","inputs": {"version":"'${INPUT_VERSION}'"}}'
