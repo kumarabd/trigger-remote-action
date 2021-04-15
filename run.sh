@@ -27,6 +27,7 @@ echo "Fetching latest revision...."
 REVISION_API_URL="https://$GITHUB_API_URL/repos/$REPO/releases"
 LATEST_VERSION=$(curl -H "Authorization: token $TOKEN" $REVISION_API_URL | jq -r '.[0]' | jq -r .tag_name)
 REVISION=$(cut -d '-' -f2 <<<"$LATEST_VERSION")
+REVISION=$(($REVISION+1))
 echo "Latest revision: $REVISION"
 
 WORKFLOW_API_URL="https://$GITHUB_API_URL/repos/$REPO/actions/workflows"
